@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title> Magic Mahjong Moments – Magic Mahjong Moments</title>
+<title>   – Magic Mahjong Moments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -37,15 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fa0b006091d5fc3a4081f77e09c2d459.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bfef28c7b5a40616e23d67d07c452230.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -67,15 +67,107 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-products .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-products'] = new List('listing-products', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Magic Mahjong Moments</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Tiles</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.qmd"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -84,7 +176,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><i class="fa-solid fa-crown" aria-label="crown"></i> Magic Mahjong Moments</h1>
+<h1 class="title"><center><br>
+<img src="tiles/logo.png" class="img-fluid"><br>
+</center></h1>
 </div>
 
 
@@ -101,86 +195,127 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero-section">
-<div class="content">
-<p><img src="tiles.png" class="img-fluid"></p>
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active">
+</button>
+<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1">
+</button>
+<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2">
+</button>
 </div>
-<div class="box-simple">
-<div class="tagline">
-<p>PREMIUM MAHJONG, MAIN STREET MAGIC:</p>
-</div>
-<section id="where-dreams-come-true-one-tile-at-a-time." class="level1 main-text">
-<h1><span class="text-line">Where dreams</span> <span class="text-line">come true</span> <span class="text-line">one tile at a time.</span></h1>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<p><img src="ex-image1.png" class="d-block mx-auto img-fluid"></p>
+<section id="main-street-magic" class="level3 carousel-caption">
+<h3 data-anchor-id="main-street-magic">Main Street Magic</h3>
+<p>Bring the magic of Main Street to your living room</p>
 </section>
-<div class="description">
-<p>Our premium American Mahjong set combines your favorite theme park magic with everything you need for the perfect game night. Featuring uniquely designed tiles inspired by iconic theme park elements, it’s the ultimate way to play in style.</p>
 </div>
-<p><a href="./purchase" class="btn btn-primary">Pre-order Yours – $375 &gt;&gt;</a></p>
-</div>
-</div>
-<!-- ::: {.section} -->
-<!-- ::: {.main-text} -->
-<!-- # [What Makes It Magical]{.text-line} -->
-<!-- ::: -->
-<!-- ::: {.feature-grid} -->
-<!-- ::: {.feature} -->
-<!-- <i class="fas fa-pen-fancy feature-icon"></i> -->
-<!-- #### Premium Quality -->
-<!-- Expertly-crafted tiles with durable construction and gold foil details. -->
-<!-- ::: -->
-<!-- ::: {.feature} -->
-<!-- <i class="fas fa-crown feature-icon"></i> -->
-<!-- #### Enchanted Artwork -->
-<!-- Beautiful illustrations featuring your favorite people, places, and things. -->
-<!-- ::: -->
-<!-- ::: {.feature} -->
-<!-- <i class="fas fa-gift feature-icon"></i> -->
-<!-- #### Luxury Presentation -->
-<!-- Elegant storage case with magnetic closure and silk-lined compartments. -->
-<!-- ::: -->
-<!-- ::: -->
-<!-- ::: -->
-<section class="section-alt">
-<section id="whats-included" class="level1 main-text">
-<h1><span class="text-line">What’s Included</span></h1>
+<div class="carousel-item">
+<p><img src="ex-image2.png" class="d-block mx-auto img-fluid"></p>
+<section id="rope-drop-edition" class="level3 carousel-caption">
+<h3 data-anchor-id="rope-drop-edition">Rope Drop Edition</h3>
+<p>Preorder now!</p>
 </section>
-<div class="contents-list">
-<ul>
-<li><strong>166 Premium Tiles</strong> - Featuring 8 beloved fairy tale characters (American mahjong standard)</li>
-<li><strong>Luxury Storage Case</strong> - Magnetic closure with silk interior</li>
-<li><strong>Gold Dice</strong> - Matching metallic accents</li>
-<li><strong>Certificate of Authenticity</strong> - Numbered limited edition</li>
-</ul>
 </div>
+<div class="carousel-item">
+<p><img src="ex-image1.png" class="d-block mx-auto img-fluid"></p>
+<section id="main-street-magic-1" class="level3 carousel-caption">
+<h3 data-anchor-id="main-street-magic-1">Main Street Magic</h3>
+<p>Bring the magic of Main Street to your living room</p>
 </section>
-<section id="be-among-the-first-to-own-the-magic" class="level3" style="text-align: center">
-<h3 data-anchor-id="be-among-the-first-to-own-the-magic"><a href="./purchase" class="cta">Be among the first to own the magic &gt;&gt;</a></h3>
-</section>
-<p><br></p>
-<div class="footer">
-<p>© 2025 Magic Mahjong Moments. Bringing Main Street magic to your living room.</p>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('scroll-visible');
-}
-});
-}, {
-threshold: 0.1,
-rootMargin: '0px 0px -50px 0px'
-});
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+<div class="features">
+<div class="feature">
+<p><i class="bi bi-palette-fill"></i></p>
+<section id="hand-painted-tiles" class="level3">
+<h3 data-anchor-id="hand-painted-tiles">Hand Painted Tiles</h3>
+<p>Each tile is lovingly crafted by hand with attention to every detail</p>
+</section>
+</div>
+<div class="feature">
+<p><i class="bi bi-gem"></i></p>
+<section id="luxury-quality" class="level3">
+<h3 data-anchor-id="luxury-quality">Luxury Quality</h3>
+<p>Premium materials and finishes that stand the test of time</p>
+</section>
+</div>
+<div class="feature">
+<p><i class="bi bi-heart-fill"></i></p>
+<section id="custom-designs" class="level3">
+<h3 data-anchor-id="custom-designs">Custom Designs</h3>
+<p>Unique patterns and themes tailored to your vision</p>
+</section>
+</div>
+</div>
+<section id="shop" class="level2">
+<h2 data-anchor-id="shop">Shop</h2>
+<div id="listing-products" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756241001598" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<a href="./products/tile-1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./tiles.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Mahjong Tiles
+</h5>
+<div class="card-text listing-description delink">
+<p>Rope Drop Edition</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756241012677" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<a href="./products/mat.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./tiles.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Mats
+</h5>
+<div class="card-text listing-description delink">
+<p>A matching mat</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1756241019216" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<a href="./products/pusher.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./tiles.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Pushers
+</h5>
+<div class="card-text listing-description delink">
+<p>Luxury Racks</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
-const listItems = document.querySelectorAll('.contents-list ul li');
-listItems.forEach(item => {
-    observer.observe(item);
-});
-});
-</script>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -576,6 +711,40 @@ listItems.forEach(item => {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Magic Mahjong Moments.</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about.qmd">
+<p>About</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./liscense.qmd">
+<p>Liscense</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./trademark.qmd">
+<p>Trademark</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+      <i class="bi bi-instagram" role="img">
+</i> 
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
