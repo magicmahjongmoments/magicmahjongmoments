@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.75 46.91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e664a5;
+        font-family: STIXTwoText, 'STIX Two Text';
+        font-size: 12px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #e5a8cc;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #f1f9fb;
+      }
+
+      .cls-5, .cls-4 {
+        stroke: #e665a6;
+      }
+
+      .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-6 {
+        stroke: #447cbf;
+        stroke-width: .75px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x=".5" y=".5" width="30.75" height="45.91" rx="3.87" ry="3.87"/>
+  <rect class="cls-6" x="1.74" y="1.63" width="28.27" height="43.65" rx="3.09" ry="3.09"/>
+  <text class="cls-1" transform="translate(12.9 11.34)"><tspan x="0" y="0">1</tspan></text>
+  <text/>
+  <circle class="cls-4" cx="15.87" cy="27.46" r="10.75"/>
+  <circle class="cls-3" cx="15.87" cy="27.46" r="9.38"/>
+  <circle class="cls-6" cx="15.87" cy="27.46" r="6.75"/>
+  <g>
+    <path class="cls-2" d="M12.12,23.5c-.37.33.19,1.72,1.05,2.59.84.86,2.18,1.42,2.52,1.07.33-.34-.29-1.5-.88-2.2-.86-1.02-2.3-1.81-2.68-1.46Z"/>
+    <path class="cls-2" d="M16.02,27.15c.33.37,1.72-.19,2.59-1.05.86-.84,1.42-2.18,1.07-2.52-.34-.33-1.5.29-2.2.88-1.02.86-1.81,2.3-1.46,2.68Z"/>
+    <path class="cls-2" d="M15.73,27.51c-.33-.37-1.72.19-2.59,1.05-.86.84-1.42,2.18-1.07,2.52.34.33,1.5-.29,2.2-.88,1.02-.86,1.81-2.3,1.46-2.68Z"/>
+    <path class="cls-2" d="M19.63,31.12c.37-.33-.19-1.72-1.05-2.59-.84-.86-2.18-1.42-2.52-1.07-.33.34.29,1.5.88,2.2.86,1.02,2.3,1.81,2.68,1.46Z"/>
+  </g>
+</svg>

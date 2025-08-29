@@ -1,0 +1,101 @@
+<!-- Mobile Rotation Reminder for Portrait Mode -->
+<div class="rotation-reminder" id="rotationReminder">
+    <div class="rotation-icon">📱</div>
+    <div class="rotation-message">
+        Please rotate your device to landscape mode for the best experience
+    </div>
+    <div class="rotation-subtitle">
+        This content is optimized for horizontal viewing
+    </div>
+</div>
+<style>
+    /* Mobile Rotation Reminder Styles */
+    .rotation-reminder {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .rotation-icon {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        animation: rotate-phone 2s linear infinite;
+    }
+    .rotation-message {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        max-width: 300px;
+        font-weight: 500;
+    }
+    .rotation-subtitle {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        max-width: 280px;
+    }
+    @keyframes rotate-phone {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    /* Show reminder only on mobile devices in portrait mode */
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+        .rotation-reminder {
+            display: flex !important;
+        }
+    }
+    /* Ensure it works with common mobile breakpoints - show when in portrait */
+    @media screen and (max-height: 900px) and (max-width: 500px) and (orientation: portrait) {
+        .rotation-reminder {
+            display: flex !important;
+        }
+    }
+</style>
+<script>
+    // Mobile Rotation Reminder Script
+    (function() {
+        'use strict';
+        
+        function handleOrientationChange() {
+            const reminder = document.getElementById('rotationReminder');
+            if (!reminder) return;
+            
+            const isMobile = window.innerWidth <= 768 || window.innerHeight <= 500;
+            const isPortrait = window.innerHeight > window.innerWidth;
+            
+            // Show reminder only when device is mobile AND in portrait mode
+            if (isMobile && isPortrait) {
+                reminder.style.display = 'flex';
+                console.log('Mobile portrait detected - rotation reminder active');
+            } else {
+                reminder.style.display = 'none';
+            }
+        }
+        
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                handleOrientationChange();
+            });
+        } else {
+            handleOrientationChange();
+        }
+        
+        // Listen for orientation and resize events
+        window.addEventListener('orientationchange', function() {
+            setTimeout(handleOrientationChange, 100);
+        });
+        
+        window.addEventListener('resize', handleOrientationChange);
+    })();
+</script>

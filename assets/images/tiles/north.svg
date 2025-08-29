@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.75 46.91">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 24px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #f1f9fb;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #447cbf;
+        stroke-width: .75px;
+      }
+
+      .cls-2 {
+        stroke: #e665a6;
+      }
+
+      .cls-4 {
+        fill: #52bd8c;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #f1f9fb;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-5 {
+        fill: #eaaacd;
+      }
+
+      .cls-6 {
+        fill: #e664a5;
+        font-family: STIXTwoText, 'STIX Two Text';
+        font-size: 10px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x=".5" y=".5" width="30.75" height="45.91" rx="3.87" ry="3.87"/>
+  <rect class="cls-3" x="1.74" y="1.63" width="28.27" height="43.65" rx="3.09" ry="3.09"/>
+  <g>
+    <path class="cls-4" d="M5.01,32.42c-.68-.26-1.02-1.02-.76-1.7h0"/>
+    <path class="cls-5" d="M4.29,32.85h0c-.41-.16-.62-.62-.46-1.03"/>
+  </g>
+  <text class="cls-6" transform="translate(3.28 12.78)"><tspan class="cls-7" x="0" y="0">N</tspan><tspan x="7.32" y="0">orth</tspan></text>
+  <text class="cls-1" transform="translate(3.87 36.34)"><tspan x="0" y="0">北</tspan></text>
+</svg>

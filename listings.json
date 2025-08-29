@@ -1,18 +1,13 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/how-to-mahjong.html",
     "items": [
-      "/products/tile-1.html",
-      "/products/mat.html",
-      "/products/pusher.html"
-    ]
-  },
-  {
-    "listing": "/our-tiles.html",
-    "items": [
-      "/products/tile-1.html",
-      "/products/mat.html",
-      "/products/pusher.html"
+      "/posts/1-setup/index.html",
+      "/posts/2-tiles/index.html",
+      "/posts/3-wall/index.html",
+      "/posts/4-dealing/index.html",
+      "/posts/5-charleston/index.html",
+      "/posts/6-card/index.html"
     ]
   }
 ]
