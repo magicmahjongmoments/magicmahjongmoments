@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa1796b0115a22094e8b4bb3ad4cadfa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14c89f8fa291b6709eae354cda89278c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../shop.html"> 
-<span class="menu-text">Our Tiles</span></a>
+<span class="menu-text">Our Shop</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../our-story.html"> 
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The American Mahjong card is your guide to winning hands. You can purchase this year’s <strong>offical card</strong> from the <a href="https://www.nationalmahjonggleague.org/store.aspx#">National Mah Jongg League</a>. Each line shows exactly what 14 tiles you need to win, using shorthand symbols and helpful notes.</p>
+<p>The American Mahjong card is your guide to winning hands. You can purchase this year’s <strong>official card</strong> from the <a href="https://www.nationalmahjonggleague.org/store.aspx#">National Mah Jongg League</a>. Each line shows exactly what 14 tiles you need to win, using shorthand symbols and helpful notes.</p>
 <div class="mahj-carousel">
 <div id="carousel" class="mahj-carousel-inner">
 <section id="basic-structure" class="level3 mahj-slide">
@@ -251,75 +251,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><br></p>
 <div class="nav-buttons text-center">
-<button class="nav-btn" onclick="scrollCarousel(-1)">
-<p>← Previous</p>
+<button class="nav-btn game-btn" onclick="scrollCarousel(-1)">
+← Previous
 </button>
-<button class="nav-btn" onclick="scrollCarousel(1)">
-<p>Next →</p>
+<button class="nav-btn game-btn" onclick="scrollCarousel(1)">
+Next →
 </button>
 </div>
 <div class="box">
 <p><strong>Pro tip:</strong> Make sure to read the notes! Sometimes the pattern will use one number, but the notes specify that multiple numbers qualify.</p>
 </div>
-<section id="try-it-yourself" class="level2">
-<h2 class="anchored" data-anchor-id="try-it-yourself">Try it yourself!</h2>
-<div class="container">
-<div class="box">
-<div id="div">
-<section id="current-hand-14-tiles" class="level3">
-<h3 class="anchored" data-anchor-id="current-hand-14-tiles">Current Hand (14 tiles)</h3>
-<div id="current-hand" class="current-hand">
-
-</div>
-</section>
-</div>
-</div>
-<div class="box">
-<div id="div2">
-<section id="what-pattern-does-this-hand-form" class="level3">
-<h3 class="anchored" data-anchor-id="what-pattern-does-this-hand-form">What pattern does this hand form?</h3>
-<div id="pattern-options">
-
-</div>
-<div id="feedback" class="feedback">
-
-</div>
-<button id="check-btn">
-<p>Check Answer</p>
-</button>
-<button id="new-hand-btn">
-<p>Next Hand</p>
-</button>
-</section>
-</div>
-</div>
-</div>
-<script>
-let currentSlide = 0;
-const carousel = document.getElementById('carousel');
-const slides = carousel.children;
-const totalSlides = slides.length;
-
-function scrollCarousel(direction) {
-    currentSlide += direction;
-    if (currentSlide < 0) currentSlide = 0;
-    if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
-    
-    const slideWidth = slides[0].offsetWidth;
-    carousel.scrollTo({
-        left: slideWidth * currentSlide,
-        behavior: 'smooth'
-    });
-}
-
-carousel.addEventListener('scroll', () => {
-    const slideWidth = slides[0].offsetWidth;
-    currentSlide = Math.round(carousel.scrollLeft / slideWidth);
-});
-</script>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

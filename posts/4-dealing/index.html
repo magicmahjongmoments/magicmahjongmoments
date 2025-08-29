@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa1796b0115a22094e8b4bb3ad4cadfa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14c89f8fa291b6709eae354cda89278c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../shop.html"> 
-<span class="menu-text">Our Tiles</span></a>
+<span class="menu-text">Our Shop</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../our-story.html"> 
@@ -144,12 +144,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>We begin by determining <strong>who is East</strong> by rolling the dice. The tiles are dealt from <strong>East</strong>’s wall first. This will rotate each round.</p>
-<p>Read through these steps for how the deal works, then try it yourself in the interactive game below.</p>
+<p>Here is how the deal works:</p>
 <ol type="1">
 <li><strong>East</strong> will roll the dice to <strong>break the wall</strong> (this is like cutting the deck in cards). You break the wall by counting the number rolled from the right side of the wall. These tiles are left behind, you then “push” the remaining tiles in wall forward and deal from those.</li>
 <li><strong>East takes the first tiles</strong> and then the deal continues <strong>counter-clockwise</strong>. Each player takes two stacks of tiles (4 titles total) until all players have <strong>12 tiles</strong></li>
 <li>After the final player (<strong>North</strong>) has 12 tiles, <strong>East</strong> takes the first and third tile from the top of the wall – they will now have <strong>14 tiles</strong>. Then the remaining players each take <strong>1 tile</strong>, they will each have <strong>13 tiles</strong>.</li>
 </ol>
+<div class="container d-none d-md-block">
+<p><strong>Your Turn</strong>: Try practicing the deal below. First click to roll the dice. Then select where the East wall should “break” based on the roll. Finally drag the right number of tiles to each player.</p>
 <div id="gameBoard" class="game-board">
 <div id="leftWall" class="wall-area left" data-wall="North Wall">
 
@@ -184,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <p>Total</p>
-<button onclick="game.rollDice()">
+<button onclick="game.rollDice()" class="game-btn">
 <p>Roll Dice</p>
 </button>
 </div>
@@ -204,11 +206,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="text-center">
-<button onclick="game.reset()">
-<p>Reset Game</p>
+<button onclick="game.reset()" class="game-btn">
+Reset Game
 </button>
-<button onclick="game.showHint()">
-<p>Show Hint</p>
+<button onclick="game.showHint()" class="game-btn">
+Show Hint
 </button>
 </div>
 <div id="completionMessage" class="completion-message">
@@ -216,12 +218,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="perfect-deal">🎉 Perfect Deal!</h2>
 <p>You’ve successfully dealt all tiles correctly!<br>
 Each player has the right number of tiles.</p>
-<button onclick="game.reset()">
-<p>Practice Again</p>
+<button onclick="game.reset()" class="game-btn">
+Practice Again
 </button>
 </section>
 </div>
-<p><a href="../../posts/5-charleston" class="button">Next Lesson</a></p>
+</div>
+<p><a href="../../posts/5-charleston" class="game-btn">Next Lesson</a></p>
 
 
 

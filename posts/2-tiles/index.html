@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa1796b0115a22094e8b4bb3ad4cadfa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14c89f8fa291b6709eae354cda89278c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../shop.html"> 
-<span class="menu-text">Our Tiles</span></a>
+<span class="menu-text">Our Shop</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../our-story.html"> 
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Click through the flashcards below to learn about the different tiles, then scroll to the end of this page to test your knowledge!</p>
+<p>Click through the flashcards below to learn about the different tiles.</p>
 <div class="mahj-carousel">
 <div id="carousel" class="mahj-carousel-inner">
 <section id="there-are-the-five-types-of-mahjong-tiles" class="level3 mahj-slide">
@@ -270,225 +270,20 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><br></p>
 <div class="nav-buttons text-center">
-<button class="nav-btn" onclick="scrollCarousel(-1)">
-<p>← Previous</p>
+<button class="nav-btn game-btn" onclick="scrollCarousel(-1)">
+← Previous
 </button>
-<button class="nav-btn" onclick="scrollCarousel(1)">
-<p>Next →</p>
+<button class="nav-btn game-btn" onclick="scrollCarousel(1)">
+Next →
 </button>
-</div>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p>The suits look different depending on the set you are playing with, but here are some common ones:</p>
-<div class="mahj-carousel">
-<div id="carousel2" class="mahj-carousel-inner">
-<section id="traditional-tile-set" class="level3 mahj-slide">
-<h3 class="anchored" data-anchor-id="traditional-tile-set">Traditional Tile Set</h3>
-<p><img src="tiles/traditional.svg" class="img-fluid"></p>
-</section>
-<section id="the-mahjong-line" class="level3 mahj-slide">
-<h3 class="anchored" data-anchor-id="the-mahjong-line">The Mahjong Line</h3>
-<p><img src="tiles/the-mahjong-line.svg" class="img-fluid"></p>
-</section>
-<section id="my-fair-mahjong" class="level3 mahj-slide">
-<h3 class="anchored" data-anchor-id="my-fair-mahjong">My Fair Mahjong</h3>
-<p>There are lots of cute variations available for Mahjong sets. Here is a Southeast Series from <em>My Fair Mahjong</em>. If you are playing with a set you are not familiar with, you can ask to see the included card that will tell you which design represent which tiles.</p>
-<p><img src="tiles/my-fair-mahjong.svg" class="img-fluid"></p>
-</section>
-</div>
 </div>
 <p><br></p>
-<div class="nav-buttons text-center">
-<button class="nav-btn" onclick="scrollCarousel2(-1)">
-<p>← Previous</p>
-</button>
-<button class="nav-btn" onclick="scrollCarousel2(1)">
-<p>Next →</p>
-</button>
-</div>
-<div class="tile-trainer">
-<div class="quiz-container">
-<h3 class="anchored">Quick Knowledge Check</h3>
-<p>Can you identify what type each tile is? Run through these as many times as you'd like to get to know some common tiles.</p>
-<div class="progress-bar">
-<div class="progress-fill" id="progressFill"></div>
-</div>
-<div class="score" id="score">Ready to start?</div>
-<div class="tile-display">
-<div class="tile-image" id="currentTile">
-<div class="tile-symbol">🀄</div>
-</div>
-</div>
-<div class="options" id="options"></div>
-<div class="feedback" id="feedback"></div>
-<button class="control-btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next Question →</button>
-<button class="control-btn" id="startBtn" onclick="startQuiz()">Start Interactive Quiz!</button>
-</div>
-<script>
-    const quizData = {"tiles":[{"type":"Bam","name":"a 1 Bam from the a Traditional Set","image":"tiles/bam-1-a-traditional-set.png","filename":"bam-1-a-traditional-set.png"},{"type":"Bam","name":"a 1 Bam from the My Fair Mahjong","image":"tiles/bam-1-my-fair-mahjong.png","filename":"bam-1-my-fair-mahjong.png"},{"type":"Bam","name":"a 1 Bam from the The Mahjong Line","image":"tiles/bam-1-the-mahjong-line.png","filename":"bam-1-the-mahjong-line.png"},{"type":"Bam","name":"a 2 Bam from the a Traditional Set","image":"tiles/bam-2-a-traditional-set.png","filename":"bam-2-a-traditional-set.png"},{"type":"Bam","name":"a 2 Bam from the My Fair Mahjong","image":"tiles/bam-2-my-fair-mahjong.png","filename":"bam-2-my-fair-mahjong.png"},{"type":"Bam","name":"a 2 Bam from the The Mahjong Line","image":"tiles/bam-2-the-mahjong-line.png","filename":"bam-2-the-mahjong-line.png"},{"type":"Bam","name":"a 3 Bam from the a Traditional Set","image":"tiles/bam-3-a-traditional-set.png","filename":"bam-3-a-traditional-set.png"},{"type":"Bam","name":"a 3 Bam from the My Fair Mahjong","image":"tiles/bam-3-my-fair-mahjong.png","filename":"bam-3-my-fair-mahjong.png"},{"type":"Bam","name":"a 3 Bam from the The Mahjong Line","image":"tiles/bam-3-the-mahjong-line.png","filename":"bam-3-the-mahjong-line.png"},{"type":"Bam","name":"a 4 Bam from the a Traditional Set","image":"tiles/bam-4-a-traditional-set.png","filename":"bam-4-a-traditional-set.png"},{"type":"Bam","name":"a 4 Bam from the My Fair Mahjong","image":"tiles/bam-4-my-fair-mahjong.png","filename":"bam-4-my-fair-mahjong.png"},{"type":"Bam","name":"a 4 Bam from the The Mahjong Line","image":"tiles/bam-4-the-mahjong-line.png","filename":"bam-4-the-mahjong-line.png"},{"type":"Bam","name":"a 5 Bam from the a Traditional Set","image":"tiles/bam-5-a-traditional-set.png","filename":"bam-5-a-traditional-set.png"},{"type":"Bam","name":"a 5 Bam from the My Fair Mahjong","image":"tiles/bam-5-my-fair-mahjong.png","filename":"bam-5-my-fair-mahjong.png"},{"type":"Bam","name":"a 5 Bam from the The Mahjong Line","image":"tiles/bam-5-the-mahjong-line.png","filename":"bam-5-the-mahjong-line.png"},{"type":"Bam","name":"a 6 Bam from the a Traditional Set","image":"tiles/bam-6-a-traditional-set.png","filename":"bam-6-a-traditional-set.png"},{"type":"Bam","name":"a 6 Bam from the My Fair Mahjong","image":"tiles/bam-6-my-fair-mahjong.png","filename":"bam-6-my-fair-mahjong.png"},{"type":"Bam","name":"a 6 Bam from the The Mahjong Line","image":"tiles/bam-6-the-mahjong-line.png","filename":"bam-6-the-mahjong-line.png"},{"type":"Bam","name":"a 7 Bam from the a Traditional Set","image":"tiles/bam-7-a-traditional-set.png","filename":"bam-7-a-traditional-set.png"},{"type":"Bam","name":"a 7 Bam from the My Fair Mahjong","image":"tiles/bam-7-my-fair-mahjong.png","filename":"bam-7-my-fair-mahjong.png"},{"type":"Bam","name":"a 7 Bam from the The Mahjong Line","image":"tiles/bam-7-the-mahjong-line.png","filename":"bam-7-the-mahjong-line.png"},{"type":"Bam","name":"an 8 Bam from the a Traditional Set","image":"tiles/bam-8-a-traditional-set.png","filename":"bam-8-a-traditional-set.png"},{"type":"Bam","name":"an 8 Bam from the My Fair Mahjong","image":"tiles/bam-8-my-fair-mahjong.png","filename":"bam-8-my-fair-mahjong.png"},{"type":"Bam","name":"an 8 Bam from the The Mahjong Line","image":"tiles/bam-8-the-mahjong-line.png","filename":"bam-8-the-mahjong-line.png"},{"type":"Bam","name":"a 9 Bam from the a Traditional Set","image":"tiles/bam-9-a-traditional-set.png","filename":"bam-9-a-traditional-set.png"},{"type":"Bam","name":"a 9 Bam from the My Fair Mahjong","image":"tiles/bam-9-my-fair-mahjong.png","filename":"bam-9-my-fair-mahjong.png"},{"type":"Bam","name":"a 9 Bam from the The Mahjong Line","image":"tiles/bam-9-the-mahjong-line.png","filename":"bam-9-the-mahjong-line.png"},{"type":"Bam","name":"a Bam Dragon (Green Dragon) from the a Traditional Set","image":"tiles/bam-dragon-a-traditional-set.png","filename":"bam-dragon-a-traditional-set.png"},{"type":"Bam","name":"a Bam Dragon (Green Dragon) from the My Fair Mahjong","image":"tiles/bam-dragon-my-fair-mahjong.png","filename":"bam-dragon-my-fair-mahjong.png"},{"type":"Bam","name":"a Bam Dragon (Green Dragon) from the The Mahjong Line","image":"tiles/bam-dragon-the-mahjong-line.png","filename":"bam-dragon-the-mahjong-line.png"},{"type":"Crak","name":"a 1 Crak from the a Traditional Set","image":"tiles/crak-1-a-traditional-set.png","filename":"crak-1-a-traditional-set.png"},{"type":"Crak","name":"a 1 Crak from the My Fair Mahjong","image":"tiles/crak-1-my-fair-mahjong.png","filename":"crak-1-my-fair-mahjong.png"},{"type":"Crak","name":"a 1 Crak from the The Mahjong Line","image":"tiles/crak-1-the-mahjong-line.png","filename":"crak-1-the-mahjong-line.png"},{"type":"Crak","name":"a 2 Crak from the a Traditional Set","image":"tiles/crak-2-a-traditional-set.png","filename":"crak-2-a-traditional-set.png"},{"type":"Crak","name":"a 2 Crak from the My Fair Mahjong","image":"tiles/crak-2-my-fair-mahjong.png","filename":"crak-2-my-fair-mahjong.png"},{"type":"Crak","name":"a 2 Crak from the The Mahjong Line","image":"tiles/crak-2-the-mahjong-line.png","filename":"crak-2-the-mahjong-line.png"},{"type":"Crak","name":"a 3 Crak from the a Traditional Set","image":"tiles/crak-3-a-traditional-set.png","filename":"crak-3-a-traditional-set.png"},{"type":"Crak","name":"a 3 Crak from the My Fair Mahjong","image":"tiles/crak-3-my-fair-mahjong.png","filename":"crak-3-my-fair-mahjong.png"},{"type":"Crak","name":"a 3 Crak from the The Mahjong Line","image":"tiles/crak-3-the-mahjong-line.png","filename":"crak-3-the-mahjong-line.png"},{"type":"Crak","name":"a 4 Crak from the a Traditional Set","image":"tiles/crak-4-a-traditional-set.png","filename":"crak-4-a-traditional-set.png"},{"type":"Crak","name":"a 4 Crak from the My Fair Mahjong","image":"tiles/crak-4-my-fair-mahjong.png","filename":"crak-4-my-fair-mahjong.png"},{"type":"Crak","name":"a 4 Crak from the The Mahjong Line","image":"tiles/crak-4-the-mahjong-line.png","filename":"crak-4-the-mahjong-line.png"},{"type":"Crak","name":"a 5 Crak from the a Traditional Set","image":"tiles/crak-5-a-traditional-set.png","filename":"crak-5-a-traditional-set.png"},{"type":"Crak","name":"a 5 Crak from the My Fair Mahjong","image":"tiles/crak-5-my-fair-mahjong.png","filename":"crak-5-my-fair-mahjong.png"},{"type":"Crak","name":"a 5 Crak from the The Mahjong Line","image":"tiles/crak-5-the-mahjong-line.png","filename":"crak-5-the-mahjong-line.png"},{"type":"Crak","name":"a 6 Crak from the a Traditional Set","image":"tiles/crak-6-a traditional-set.png","filename":"crak-6-a traditional-set.png"},{"type":"Crak","name":"a 6 Crak from the My Fair Mahjong","image":"tiles/crak-6-my-fair-mahjong.png","filename":"crak-6-my-fair-mahjong.png"},{"type":"Crak","name":"a 6 Crak from the The Mahjong Line","image":"tiles/crak-6-the-mahjong-line.png","filename":"crak-6-the-mahjong-line.png"},{"type":"Crak","name":"a 7 Crak from the a Traditional Set","image":"tiles/crak-7-a-traditional-set.png","filename":"crak-7-a-traditional-set.png"},{"type":"Crak","name":"a 7 Crak from the My Fair Mahjong","image":"tiles/crak-7-my-fair-mahjong.png","filename":"crak-7-my-fair-mahjong.png"},{"type":"Crak","name":"a 7 Crak from the The Mahjong Line","image":"tiles/crak-7-the-mahjong-line.png","filename":"crak-7-the-mahjong-line.png"},{"type":"Crak","name":"an 8 Crak from the a Traditional Set","image":"tiles/crak-8-a-traditional-set.png","filename":"crak-8-a-traditional-set.png"},{"type":"Crak","name":"an 8 Crak from the My Fair Mahjong","image":"tiles/crak-8-my-fair-mahjong.png","filename":"crak-8-my-fair-mahjong.png"},{"type":"Crak","name":"an 8 Crak from the The Mahjong Line","image":"tiles/crak-8-the-mahjong-line.png","filename":"crak-8-the-mahjong-line.png"},{"type":"Crak","name":"a 9 Crak from the a Traditional Set","image":"tiles/crak-9-a-traditional-set.png","filename":"crak-9-a-traditional-set.png"},{"type":"Crak","name":"a 9 Crak from the My Fair Mahjong","image":"tiles/crak-9-my-fair-mahjong.png","filename":"crak-9-my-fair-mahjong.png"},{"type":"Crak","name":"a 9 Crak from the The Mahjong Line","image":"tiles/crak-9-the-mahjong-line.png","filename":"crak-9-the-mahjong-line.png"},{"type":"Crak","name":"a Crak Dragon (Red Dragon) from the a Traditional Set","image":"tiles/crak-dragon-a-traditional-set.png","filename":"crak-dragon-a-traditional-set.png"},{"type":"Crak","name":"a Crak Dragon (Red Dragon) from the My Fair Mahjong","image":"tiles/crak-dragon-my-fair-mahjong.png","filename":"crak-dragon-my-fair-mahjong.png"},{"type":"Crak","name":"a Crak Dragon (Red Dragon) from the The Mahjong Line","image":"tiles/crak-dragon-the-mahjong-line.png","filename":"crak-dragon-the-mahjong-line.png"},{"type":"Dot","name":"a 1 Dot from the a Traditional Set","image":"tiles/dot-1-a-traditional-set.png","filename":"dot-1-a-traditional-set.png"},{"type":"Dot","name":"a 1 Dot from the My Fair Mahjong","image":"tiles/dot-1-my-fair-mahjong.png","filename":"dot-1-my-fair-mahjong.png"},{"type":"Dot","name":"a 1 Dot from the The Mahjong Line","image":"tiles/dot-1-the-mahjong-line.png","filename":"dot-1-the-mahjong-line.png"},{"type":"Dot","name":"a 2 Dot from the a Traditional Set","image":"tiles/dot-2-a-traditional-set.png","filename":"dot-2-a-traditional-set.png"},{"type":"Dot","name":"a 2 Dot from the My Fair Mahjong","image":"tiles/dot-2-my-fair-mahjong.png","filename":"dot-2-my-fair-mahjong.png"},{"type":"Dot","name":"a 2 Dot from the The Mahjong Line","image":"tiles/dot-2-the-mahjong-line.png","filename":"dot-2-the-mahjong-line.png"},{"type":"Dot","name":"a 3 Dot from the a Traditional Set","image":"tiles/dot-3-a-traditional-set.png","filename":"dot-3-a-traditional-set.png"},{"type":"Dot","name":"a 3 Dot from the My Fair Mahjong","image":"tiles/dot-3-my-fair-mahjong.png","filename":"dot-3-my-fair-mahjong.png"},{"type":"Dot","name":"a 3 Dot from the The Mahjong Line","image":"tiles/dot-3-the-mahjong-line.png","filename":"dot-3-the-mahjong-line.png"},{"type":"Dot","name":"a 4 Dot from the a Traditional Set","image":"tiles/dot-4-a-traditional-set.png","filename":"dot-4-a-traditional-set.png"},{"type":"Dot","name":"a 4 Dot from the My Fair Mahjong","image":"tiles/dot-4-my-fair-mahjong.png","filename":"dot-4-my-fair-mahjong.png"},{"type":"Dot","name":"a 4 Dot from the The Mahjong Line","image":"tiles/dot-4-the-mahjong-line.png","filename":"dot-4-the-mahjong-line.png"},{"type":"Dot","name":"a 5 Dot from the a Traditional Set","image":"tiles/dot-5-a-traditional-set.png","filename":"dot-5-a-traditional-set.png"},{"type":"Dot","name":"a 5 Dot from the My Fair Mahjong","image":"tiles/dot-5-my-fair-mahjong.png","filename":"dot-5-my-fair-mahjong.png"},{"type":"Dot","name":"a 5 Dot from the The Mahjong Line","image":"tiles/dot-5-the-mahjong-line.png","filename":"dot-5-the-mahjong-line.png"},{"type":"Dot","name":"a 6 Dot from the a Traditional Set","image":"tiles/dot-6-a-traditional-set.png","filename":"dot-6-a-traditional-set.png"},{"type":"Dot","name":"a 6 Dot from the My Fair Mahjong","image":"tiles/dot-6-my-fair-mahjong.png","filename":"dot-6-my-fair-mahjong.png"},{"type":"Dot","name":"a 6 Dot from the The Mahjong Line","image":"tiles/dot-6-the-mahjong-line.png","filename":"dot-6-the-mahjong-line.png"},{"type":"Dot","name":"a 7 Dot from the a Traditional Set","image":"tiles/dot-7-a-traditional-set.png","filename":"dot-7-a-traditional-set.png"},{"type":"Dot","name":"a 7 Dot from the My Fair Mahjong","image":"tiles/dot-7-my-fair-mahjong.png","filename":"dot-7-my-fair-mahjong.png"},{"type":"Dot","name":"a 7 Dot from the The Mahjong Line","image":"tiles/dot-7-the-mahjong-line.png","filename":"dot-7-the-mahjong-line.png"},{"type":"Dot","name":"an 8 Dot from the a Traditional Set","image":"tiles/dot-8-a-traditional-set.png","filename":"dot-8-a-traditional-set.png"},{"type":"Dot","name":"an 8 Dot from the My Fair Mahjong","image":"tiles/dot-8-my-fair-mahjong.png","filename":"dot-8-my-fair-mahjong.png"},{"type":"Dot","name":"an 8 Dot from the The Mahjong Line","image":"tiles/dot-8-the-mahjong-line.png","filename":"dot-8-the-mahjong-line.png"},{"type":"Dot","name":"a 9 Dot from the a Traditional Set","image":"tiles/dot-9-a-traditional-set.png","filename":"dot-9-a-traditional-set.png"},{"type":"Dot","name":"a 9 Dot from the My Fair Mahjong","image":"tiles/dot-9-my-fair-mahjong.png","filename":"dot-9-my-fair-mahjong.png"},{"type":"Dot","name":"a 9 Dot from the The Mahjong Line","image":"tiles/dot-9-the-mahjong-line.png","filename":"dot-9-the-mahjong-line.png"},{"type":"Dot","name":"a Dot Dragon (Soap) from the a Traditional Set","image":"tiles/dot-dragon-a-traditional-set.png","filename":"dot-dragon-a-traditional-set.png"},{"type":"Dot","name":"a Dot Dragon (Soap) from the My Fair Mahjong","image":"tiles/dot-dragon-my-fair-mahjong.png","filename":"dot-dragon-my-fair-mahjong.png"},{"type":"Dot","name":"a Dot Dragon (Soap) from the The Mahjong Line","image":"tiles/dot-dragon-the-mahjong-line.png","filename":"dot-dragon-the-mahjong-line.png"},{"type":"Flower","name":"a 1 Flower from the a Traditional Set","image":"tiles/flower-1-a-traditional-set.png","filename":"flower-1-a-traditional-set.png"},{"type":"Flower","name":"a 1 Flower from the My Fair Mahjong","image":"tiles/flower-1-my-fair-mahjong.png","filename":"flower-1-my-fair-mahjong.png"},{"type":"Flower","name":"a 1 Flower from the The Mahjong Line","image":"tiles/flower-1-the-mahjong-line.png","filename":"flower-1-the-mahjong-line.png"},{"type":"Flower","name":"a 2 Flower from the a Traditional Set","image":"tiles/flower-2-a-traditional-set.png","filename":"flower-2-a-traditional-set.png"},{"type":"Flower","name":"a 2 Flower from the My Fair Mahjong","image":"tiles/flower-2-my-fair-mahjong.png","filename":"flower-2-my-fair-mahjong.png"},{"type":"Flower","name":"a 2 Flower from the The Mahjong Line","image":"tiles/flower-2-the-mahjong-line.png","filename":"flower-2-the-mahjong-line.png"},{"type":"Flower","name":"a 3 Flower from the a Traditional Set","image":"tiles/flower-3-a-traditional-set.png","filename":"flower-3-a-traditional-set.png"},{"type":"Flower","name":"a 3 Flower from the My Fair Mahjong","image":"tiles/flower-3-my-fair-mahjong.png","filename":"flower-3-my-fair-mahjong.png"},{"type":"Flower","name":"a 3 Flower from the The Mahjong Line","image":"tiles/flower-3-the-mahjong-line.png","filename":"flower-3-the-mahjong-line.png"},{"type":"Flower","name":"a 4 Flower from the a Traditional Set","image":"tiles/flower-4-a-traditional-set.png","filename":"flower-4-a-traditional-set.png"},{"type":"Flower","name":"a 4 Flower from the My Fair Mahjong","image":"tiles/flower-4-my-fair-mahjong.png","filename":"flower-4-my-fair-mahjong.png"},{"type":"Flower","name":"a 4 Flower from the The Mahjong Line","image":"tiles/flower-4-the-mahjong-line.png","filename":"flower-4-the-mahjong-line.png"},{"type":"Flower","name":"a 5 Flower from the a Traditional Set","image":"tiles/flower-5-a-traditional-set.png","filename":"flower-5-a-traditional-set.png"},{"type":"Flower","name":"a 5 Flower from the My Fair Mahjong","image":"tiles/flower-5-my-fair-mahjong.png","filename":"flower-5-my-fair-mahjong.png"},{"type":"Flower","name":"a 5 Flower from the The Mahjong Line","image":"tiles/flower-5-the-mahjong-line.png","filename":"flower-5-the-mahjong-line.png"},{"type":"Flower","name":"a 6 Flower from the a Traditional Set","image":"tiles/flower-6-a-traditional-set.png","filename":"flower-6-a-traditional-set.png"},{"type":"Flower","name":"a 6 Flower from the My Fair Mahjong","image":"tiles/flower-6-my-fair-mahjong.png","filename":"flower-6-my-fair-mahjong.png"},{"type":"Flower","name":"a 6 Flower from the The Mahjong Line","image":"tiles/flower-6-the-mahjong-line.png","filename":"flower-6-the-mahjong-line.png"},{"type":"Flower","name":"a 7 Flower from the a Traditional Set","image":"tiles/flower-7-a-traditional-set.png","filename":"flower-7-a-traditional-set.png"},{"type":"Flower","name":"a 7 Flower from the My Fair Mahjong","image":"tiles/flower-7-my-fair-mahjong.png","filename":"flower-7-my-fair-mahjong.png"},{"type":"Flower","name":"a 7 Flower from the The Mahjong Line","image":"tiles/flower-7-the-mahjong-line.png","filename":"flower-7-the-mahjong-line.png"},{"type":"Flower","name":"an 8 Flower from the a Traditional Set","image":"tiles/flower-8-a-traditional-set.png","filename":"flower-8-a-traditional-set.png"},{"type":"Flower","name":"an 8 Flower from the My Fair Mahjong","image":"tiles/flower-8-my-fair-mahjong.png","filename":"flower-8-my-fair-mahjong.png"},{"type":"Flower","name":"a 9 Flower from the The Mahjong Line","image":"tiles/flower-9-the-mahjong-line.png","filename":"flower-9-the-mahjong-line.png"},{"type":"Joker","name":"a 1 Joker from the a Traditional Set","image":"tiles/joker-1-a-traditional-set.png","filename":"joker-1-a-traditional-set.png"},{"type":"Joker","name":"a 1 Joker from the My Fair Mahjong","image":"tiles/joker-1-my-fair-mahjong.png","filename":"joker-1-my-fair-mahjong.png"},{"type":"Joker","name":"a 1 Joker from the The Mahjong Line","image":"tiles/joker-1-the-mahjong-line.png","filename":"joker-1-the-mahjong-line.png"},{"type":"Wind","name":"East Wind from the a Traditional Set","image":"tiles/wind-east-a-traditional-set.png","filename":"wind-east-a-traditional-set.png"},{"type":"Wind","name":"East Wind from the My Fair Mahjong","image":"tiles/wind-east-my-fair-mahjong.png","filename":"wind-east-my-fair-mahjong.png"},{"type":"Wind","name":"East Wind from the The Mahjong Line","image":"tiles/wind-east-the-mahjong-line.png","filename":"wind-east-the-mahjong-line.png"},{"type":"Wind","name":"North Wind from the a Traditional Set","image":"tiles/wind-north-a-traditional-set.png","filename":"wind-north-a-traditional-set.png"},{"type":"Wind","name":"North Wind from the My Fair Mahjong","image":"tiles/wind-north-my-fair-mahjong.png","filename":"wind-north-my-fair-mahjong.png"},{"type":"Wind","name":"North Wind from the The Mahjong Line","image":"tiles/wind-north-the-mahjong-line.png","filename":"wind-north-the-mahjong-line.png"},{"type":"Wind","name":"South Wind from the a Traditional Set","image":"tiles/wind-south-a-traditional-set.png","filename":"wind-south-a-traditional-set.png"},{"type":"Wind","name":"South Wind from the The Mahjong Line","image":"tiles/wind-south-the-mahjong-line.png","filename":"wind-south-the-mahjong-line.png"},{"type":"Wind","name":"West Wind from the a Traditional Set","image":"tiles/wind-west-a-traditional-set.png","filename":"wind-west-a-traditional-set.png"},{"type":"Wind","name":"West Wind from the My Fair Mahjong","image":"tiles/wind-west-my-fair-mahjong.png","filename":"wind-west-my-fair-mahjong.png"},{"type":"Wind","name":"West Wind from the The Mahjong Line","image":"tiles/wind-west-the-mahjong-line.png","filename":"wind-west-the-mahjong-line.png"}],"total_questions":25,"all_types":["Dot","Bam","Crak","Wind","Flower","Joker"]};
-    let currentQuestionIndex = 0;
-    let score = 0;
-    let answered = false;
-    let questions = [];
-    
-    function generateQuestions() {
-      questions = [];
-      for (let i = 0; i < quizData.total_questions; i++) {
-        const currentTile = quizData.tiles[Math.floor(Math.random() * quizData.tiles.length)];
-        const correctType = currentTile.type;
-        
-        const otherTypes = quizData.all_types.filter(type => type !== correctType);
-        const wrongOptions = otherTypes.sort(() => 0.5 - Math.random()).slice(0, Math.min(3, otherTypes.length));
-        
-        const allOptions = [correctType, ...wrongOptions].sort(() => 0.5 - Math.random());
-        const correctIndex = allOptions.indexOf(correctType);
-        
-        questions.push({
-          tile: currentTile,
-          options: allOptions,
-          correct_answer: correctType,
-          correct_index: correctIndex
-        });
-      }
-    }
-    
-    function displayQuestion() {
-      const question = questions[currentQuestionIndex];
-      const tile = question.tile;
-      
-      // Update tile display
-      document.getElementById('currentTile').innerHTML = `
-        <img src="${tile.image}"
-             onerror="this.style.display='none'; this.nextSibling.style.display='flex';"
-             style="width: 100%; height: 100%; object-fit: contain;">
-      `;
-      
-      // Update options
-      const optionsContainer = document.getElementById('options');
-      optionsContainer.innerHTML = '';
-      question.options.forEach((option, index) => {
-        const button = document.createElement('div');
-        button.className = 'option-btn';
-        button.textContent = option;
-        button.onclick = () => selectOption(index);
-        optionsContainer.appendChild(button);
-      });
-      
-      // Update progress and score
-      const progress = ((currentQuestionIndex) / quizData.total_questions) * 100;
-      document.getElementById('progressFill').style.width = progress + '%';
-      document.getElementById('score').textContent = 
-        `Question ${currentQuestionIndex + 1} of ${quizData.total_questions} | Score: ${score}/${currentQuestionIndex}`;
-      
-      // Reset UI state
-      document.getElementById('feedback').style.display = 'none';
-      document.getElementById('nextBtn').style.display = 'none';
-      answered = false;
-    }
-    
-    function selectOption(selectedIndex) {
-      if (answered) return;
-      answered = true;
-      
-      const question = questions[currentQuestionIndex];
-      const isCorrect = selectedIndex === question.correct_index;
-      const optionButtons = document.querySelectorAll('.option-btn');
-      
-      // Show correct/incorrect styling
-      optionButtons.forEach((btn, index) => {
-        if (index === question.correct_index) {
-          btn.classList.add('correct');
-        } else if (index === selectedIndex && !isCorrect) {
-          btn.classList.add('incorrect');
-        }
-        btn.style.pointerEvents = 'none';
-      });
-      
-      // Update score and show feedback
-      const feedback = document.getElementById('feedback');
-      if (isCorrect) {
-        score++;
-        feedback.className = 'feedback correct';
-        feedback.innerHTML = `✓ Correct! This is ${question.tile.name}.`;
-      } else {
-        feedback.className = 'feedback incorrect';
-        feedback.innerHTML = `✗ This is ${question.tile.name}, not ${question.options[selectedIndex]}.`;
-      }
-      
-      feedback.style.display = 'block';
-      currentQuestionIndex++;
-      
-      if (currentQuestionIndex < quizData.total_questions) {
-        document.getElementById('nextBtn').style.display = 'block';
-      } else {
-        setTimeout(showFinalScore, 200);
-      }
-    }
-    
-    function nextQuestion() {
-      document.querySelectorAll('.option-btn').forEach(btn => {
-        btn.classList.remove('correct', 'incorrect');
-        btn.style.pointerEvents = 'auto';
-      });
-      displayQuestion();
-    }
-    
-    function showFinalScore() {
-      const percentage = Math.round((score / quizData.total_questions) * 100);
-      let message = '';
-      
-      if (percentage >= 85) message = 'Excellent! You know your tiles! 🏆';
-      else if (percentage >= 65) message = 'Good job! Keep practicing! 👍';
-      else message = 'Keep studying - you\'ll improve! 📚';
-      
-      const feedback = document.getElementById('feedback');
-      feedback.className = 'feedback correct';
-      feedback.innerHTML = `
-        <strong>Quiz Complete!</strong><br>
-        Final Score: ${score}/${quizData.total_questions} (${percentage}%)<br>
-        ${message}
-      `;
-      feedback.style.display = 'block';
-      
-      const nextBtn = document.getElementById('nextBtn');
-      nextBtn.textContent = 'Try Again 🔄';
-      nextBtn.onclick = restartQuiz;
-      nextBtn.style.display = 'block';
-      
-      document.getElementById('progressFill').style.width = '100%';
-      document.getElementById('score').textContent = `Final Score: ${score}/${quizData.total_questions}`;
-    }
-    
-    function startQuiz() {
-      generateQuestions();
-      document.getElementById('startBtn').style.display = 'none';
-      displayQuestion();
-    }
-    
-    function restartQuiz() {
-      currentQuestionIndex = 0;
-      score = 0;
-      answered = false;
-      generateQuestions();
-      document.getElementById('nextBtn').textContent = 'Next Question →';
-      document.getElementById('nextBtn').onclick = nextQuestion;
-      displayQuestion();
-    }
-  </script>
-</div>
-<div class="box">
-<p>Fun fact: The 1 Bam is sometimes called the “Bird Bam” when it is discarded, a tradition is to all “cheers” 🥂</p>
-</div>
-<p><a href="../../posts/3-wall" class="button">Next Lesson</a></p>
+<p><a href="../../posts/3-wall" class="game-btn">Next Lesson</a></p>
 <script>
 let currentSlide = 0;
-let currentSlide2 = 0;
 const carousel = document.getElementById('carousel');
-const carousel2 = document.getElementById('carousel2');
 const slides = carousel.children;
-const slides2 = carousel2.children;
 const totalSlides = slides.length;
-const totalSlides2 = slides2.length;
 
 function scrollCarousel(direction) {
 currentSlide += direction;
@@ -503,32 +298,15 @@ carousel.scrollTo({
 });
 }
 
-function scrollCarousel2(direction) {
-currentSlide2 += direction;
-
-if (currentSlide2 < 0) currentSlide2 = 0;
-if (currentSlide2 >= totalSlides2) currentSlide2 = totalSlides2 - 1;
-
-const slideWidth = slides2[0].offsetWidth;
-carousel2.scrollTo({
-    left: slideWidth * currentSlide2,
-    behavior: 'smooth'
-});
-}
 
 carousel.addEventListener('scroll', () => {
     const slideWidth = slides[0].offsetWidth;
     currentSlide = Math.round(carousel.scrollLeft / slideWidth);
 });
 
-carousel2.addEventListener('scroll', () => {
-    const slideWidth = slides2[0].offsetWidth;
-    currentSlide2 = Math.round(carousel2.scrollLeft / slideWidth);
-});
 </script>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

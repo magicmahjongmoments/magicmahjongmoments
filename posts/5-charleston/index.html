@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa1796b0115a22094e8b4bb3ad4cadfa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14c89f8fa291b6709eae354cda89278c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../shop.html"> 
-<span class="menu-text">Our Tiles</span></a>
+<span class="menu-text">Our Shop</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../our-story.html"> 
@@ -149,8 +149,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>First Charleston</strong>: Right → Across → Left<br>
 <strong>Second Charleston</strong>: Left → Across → Right</p>
 <p>After the Charleston(s), players may make an optional <strong>courtesy pass</strong> with the player sitting across from them. Both players must agree on how many tiles to exchange (0-3 tiles each). Either player can decline to pass any tiles.</p>
-<p>Let’s practice!</p>
-<div class="container">
+<div class="container d-none d-md-block">
 <div class="instructions">
 <p><strong>Practice the Charleston:</strong></p>
 <p>Select 3 tiles to pass each time. Drag the tiles to the correct player.</p>
@@ -227,34 +226,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="charleston-info" class="charleston-info" style="display: none;">
 <section id="charleston-complete" class="level3">
 <h3 class="anchored" data-anchor-id="charleston-complete">Charleston Complete!</h3>
-<button onclick="charlestonGame.nextCharleston()">
-<p>Continue</p>
+<button onclick="charlestonGame.nextCharleston()" class="game-btn">
+Continue
 </button>
 </section>
 </div>
 </div>
-<div class="controls">
-<button id="blind-pass-btn" onclick="charlestonGame.makeBlindPass()" style="display: none;">
-<p>Blind Pass</p>
+<div class="controls text-center">
+<button id="blind-pass-btn" onclick="charlestonGame.makeBlindPass()" style="display: none;" class="game-btn">
+Blind Pass
 </button>
-<button onclick="charlestonGame.skipSecondPass()" id="skip-btn" style="display: none;">
-<p>Skip 2nd Charleston</p>
+<button onclick="charlestonGame.skipSecondPass()" class="game-btn" id="skip-btn" style="display: none;">
+Skip 2nd Charleston
 </button>
-<button onclick="charlestonGame.newGame()">
+<button onclick="charlestonGame.newGame()" class="game-btn">
 <p>New Game</p>
 </button>
-<button onclick="charlestonGame.showHelp()">
-<p>Help</p>
+<button onclick="charlestonGame.showHelp()" class="game-btn">
+Help
 </button>
 <button id="clear-selection-btn" class="game-btn" style="display: none;">
-<p>Clear Selection</p>
+Clear Selection
 </button>
 <button id="sort-hand-btn" class="game-btn">
-<p>Sort Hand</p>
+Sort Hand
 </button>
 </div>
 </div>
-<p><a href="../../posts/6-card" class="button">Next Lesson</a></p>
+<p><a href="../../posts/6-card" class="game-btn">Next Lesson</a></p>
 
 
 

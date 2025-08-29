@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa1796b0115a22094e8b4bb3ad4cadfa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14c89f8fa291b6709eae354cda89278c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../shop.html"> 
-<span class="menu-text">Our Tiles</span></a>
+<span class="menu-text">Our Shop</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../our-story.html"> 
@@ -152,7 +152,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>38 tiles total</strong> per wall (19 × 2)</li>
 </ul>
 <p>All tiles are placed <strong>face down</strong> so no one can see what they are.</p>
-<div class="container">
+<div class="container d-none d-md-block">
+<p><strong>Your Turn</strong>: Try practicing building a wall by dragging the right number of tiles to the pink area labeled “Your Wall” below.</p>
 <div id="gameBoard" class="game-board">
 <div id="leftWall" class="wall-area left built-wall" data-wall="Left">
 
@@ -170,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<div class="stats">
+<div class="stats text-center">
 <div class="stat-box">
 <div id="tilesRemaining" class="stat-number">
 <p>38</p>
@@ -196,15 +197,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Stacks Needed</p>
 </div>
 </div>
-<div class="controls">
-<button onclick="game.reset()">
-<p>Reset Game</p>
+<div class="controls text-center">
+<button onclick="game.reset()" class="game-btn">
+Reset Game
 </button>
-<button onclick="game.showHint()">
-<p>Show Hint</p>
+<button onclick="game.showHint()" class="game-btn">
+Show Hint
 </button>
-<button onclick="game.autoComplete()">
-<p>Auto Complete</p>
+<button onclick="game.autoComplete()" class="game-btn">
+Auto Complete
 </button>
 </div>
 <div id="completionMessage" class="completion-message">
@@ -212,13 +213,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="perfect">🎉 Perfect!</h2>
 <p>You’ve successfully built your wall!<br>
 Your wall has exactly <strong>19 stacks of 2 tiles</strong> = <strong>38 tiles total</strong></p>
-<button onclick="game.reset()">
+<button onclick="game.reset()" class="game-btn">
 <p>Practice Again</p>
 </button>
 </section>
 </div>
 </div>
-<p><a href="../../posts/4-dealing" class="button">Next Lesson</a></p>
+<p><a href="../../posts/4-dealing" class="game-btn">Next Lesson</a></p>
 
 
 
