@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>sign-up – Magic Mahjong Moments</title>
+<title>Untitled – Magic Mahjong Moments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,20 +120,347 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#magic-mahjong-moments" id="toc-magic-mahjong-moments" class="nav-link active" data-scroll-target="#magic-mahjong-moments">Magic Mahjong Moments</a></li>
+  <li><a href="#welcome-lala" id="toc-welcome-lala" class="nav-link" data-scroll-target="#welcome-lala">Welcome lala</a></li>
+  <li><a href="#creative-process" id="toc-creative-process" class="nav-link" data-scroll-target="#creative-process">Creative Process</a></li>
+  <li><a href="#la" id="toc-la" class="nav-link" data-scroll-target="#la">La</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Untitled</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<form action="https://formspree.io/f/xyzdljrv" method="POST">
-<p><label for="email">Sign up to stay in the loop:</label><br> <input type="email" name="email" id="email" required="" placeholder="you@example.com"></p>
-<p><br><br> <label> <input type="checkbox" name="consent" required=""> I agree to receive updates and accept the <a href="./privacy-policy" target="_blank">privacy policy</a>. </label></p>
-<br><br> <button type="submit">Subscribe</button>
-</form>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+    <style>
+
+        /* Base animation styles */
+        .element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: none;
+            margin: 40px 0;
+        }
+
+        .element.animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .element.static {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 1. Text Boxes */
+        .text-box {
+            background: #fefefe;
+            padding: 40px;
+            border-radius: 3px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            position: relative;
+            max-width: 600px;
+        }
+
+        .text-box::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, transparent 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+            border-radius: 5px;
+            z-index: -1;
+        }
+
+        .text-box h2 {
+            color: #2c1810;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .text-box p {
+            color: #5d4037;
+            line-height: 1.6;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Box variations */
+        .text-box.cream {
+            background: #faf8f3;
+        }
+
+        .text-box.aged {
+            background: #f4f0e8;
+        }
+
+        .text-box.center {
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .text-box.left {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .text-box.right {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        /* 2. Standalone Images */
+        .image-element {
+            transform: translateX(-100px) rotate(-5deg);
+        }
+
+        .image-element.animate-in {
+            animation: slideInImage 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
+
+        .image-element.static:hover {
+            transform: rotate(2deg) scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes slideInImage {
+            to {
+                opacity: 1;
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        .paper-image {
+            background: #fefefe;
+            padding: 20px;
+            border-radius: 3px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+            position: relative;
+            width: fit-content;
+        }
+
+        .image-content {
+            width: 300px;
+            height: 200px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5d4037;
+            font-style: italic;
+        }
+
+        /* Image positioning */
+        .image-element.left {
+            margin-left: 0;
+            transform-origin: left center;
+        }
+
+        .image-element.right {
+            margin-left: auto;
+            transform-origin: right center;
+            transform: translateX(100px) rotate(5deg);
+        }
+
+        .image-element.center {
+            margin: 40px auto;
+            transform-origin: center;
+        }
+
+        /* Square images */
+        .image-element.square .image-content {
+            width: 250px;
+            height: 250px;
+        }
+
+        /* 3. Background Text */
+        .background-text {
+            color: #2c1810;
+            transform: translateY(30px);
+        }
+
+        .background-text.animate-in {
+            animation: fadeInText 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .background-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
+        }
+
+        .background-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
+        }
+
+        .background-text p {
+            font-size: 1.3em;
+            color: #5d4037;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.7);
+        }
+
+        /* Background text positioning */
+        .background-text.center {
+            text-align: center;
+            margin: 60px auto;
+            max-width: 800px;
+        }
+
+        .background-text.left {
+            text-align: left;
+            margin: 60px 0;
+            max-width: 600px;
+        }
+
+        .background-text.right {
+            text-align: right;
+            margin: 60px 0 60px auto;
+            max-width: 600px;
+        }
+
+        /* Tape decoration */
+        .tape {
+            position: absolute;
+            width: 60px;
+            height: 20px;
+            background: rgba(255, 223, 186, 0.8);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tape-top-left {
+            top: -10px;
+            left: 30px;
+            transform: rotate(-12deg);
+        }
+
+        .tape-top-right {
+            top: -10px;
+            right: 30px;
+            transform: rotate(12deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .text-box.left,
+            .text-box.right,
+            .image-element.left,
+            .image-element.right,
+            .background-text.left,
+            .background-text.right {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            .background-text h1 {
+                font-size: 2.2em;
+            }
+
+            .background-text h2 {
+                font-size: 2em;
+            }
+
+            .image-content {
+                width: 250px;
+                height: 150px;
+            }
+        }
+    </style>
+
+<section id="magic-mahjong-moments" class="level2">
+<h2 class="anchored" data-anchor-id="magic-mahjong-moments">Magic Mahjong Moments</h2>
+</section>
+<section id="welcome-lala" class="level1 element background-text center">
+<h1>Welcome lala</h1>
+<p>asdf</p>
+</section>
+<div class="element image-element right">
+<div class="image-content">
+<p><img src="tiles/fireworks.png" class="img-fluid" style="width:50.0%"></p>
+</div>
+</div>
+<section id="creative-process" class="level2 element background-text right">
+<h2 class="anchored" data-anchor-id="creative-process">Creative Process</h2>
+<p>More background text that appears without any container. This one is aligned to the right side.</p>
+</section>
+<div class="element image-element square center">
+<div class="paper-image">
+<div class="image-content">
+<p>Square image</p>
+</div>
+</div>
+</div>
+<section id="la" class="level2 element background-text left">
+<h2 class="anchored" data-anchor-id="la">La</h2>
+<p>alsdf</p>
+</section>
+    <script>
+        // Simple scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animate-in');
+                    entry.target.classList.add('animated');
+                    
+                    setTimeout(() => {
+                        entry.target.classList.remove('animate-in');
+                        entry.target.classList.add('static');
+                    }, 1000);
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all elements
+        document.querySelectorAll('.element').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 
 
 
