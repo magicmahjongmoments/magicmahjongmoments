@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e8e430562c688404dfc0fabceac0c6ce.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-76b4f6ec3d100d6f13fdcb4208162f0d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./tiles/logo-magic.png" alt="" class="navbar-logo">
+    <img src="./images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -129,96 +129,66 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-.grid-container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  overflow: hidden;
-}
-
-.scrollable-left {
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.scrollable-right {
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.product-image {
-  transition: transform 0.3s ease;
-}
-
-.product-image:hover {
-  transform: scale(1.02);
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50vh 1fr;
+@media (min-width: 768px) {
+  .full-height-grid {
+    height: 100vh;
   }
-  
-  .scrollable-left, .scrollable-right {
+  .scrollable-column {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .scrollable-column {
     height: auto;
-    min-height: 50vh;
+    overflow-y: visible;
   }
 }
 </style>
 <div class="column-screen">
-<div class="grid-container">
-<div class="g-col-6 p-4 scrollable-left">
-<p><img src="tiles.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
-<p><img src="product.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
-<p><img src="product-2.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
-<p><img src="product-header.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
+<div class="grid full-height-grid">
+<div class="g-col-12 g-col-md-6 p-4 scrollable-column order-2 order-md-1">
+<p><img src="tiles.png" class="product-image img-fluid rounded-3 shadow mb-4"> <img src="product.png" class="product-image img-fluid rounded-3 shadow mb-4"> <img src="product-2.png" class="product-image img-fluid rounded-3 shadow mb-4"> <img src="product-header.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
 </div>
-<div class="g-col-6 border-start p-4 scrollable-right">
-<section id="the-enchantment-collection" class="level2 display-5 text-left mb-3">
-<h2 class="display-5 text-left mb-3" data-anchor-id="the-enchantment-collection">The Enchantment Collection</h2>
-<p><span class="fs-5 text-muted mb-4">Limited Edition Mahjong Collection</span></p>
-<div class="display-5 fw-bold">
-<p>$350</p>
+<div class="g-col-12 g-col-md-6 border-start p-4 scrollable-column order-1 order-md-2">
+<section id="the-enchantment-collection" class="level2 display-5 text-start mb-3">
+<h2 class="display-5 text-start mb-3" data-anchor-id="the-enchantment-collection">The Enchantment Collection</h2>
+<p><span class="fs-5 text-muted mb-4">Limited Edition Preorder</span></p>
+<div class="d-flex align-items-baseline gap-3 mb-4 fs-4">
+<p><span class="text-decoration-line-through text-muted"><del>$450</del></span> <span class="fw-bold">$350</span></p>
 </div>
-<div class="fs-5 text-decoration-line-through opacity-75">
-<p><del>$450</del></p>
+<div class="mb-4">
+<script async="" src="https://js.stripe.com/v3/buy-button.js"></script>
+<stripe-buy-button buy-button-id="buy_btn_1S0YgyFuu6ZjhmpzZ2v3NYN4" publishable-key="pk_test_51S0TWOFuu6ZjhmpzY45m6z2LOIdWhCKouQiYj7sSBWmnNywVvjFAZTuWkaIck7EwsuqOzA23cTTLxrjE7vjNDYL100sR9ZTXno">
+</stripe-buy-button>
 </div>
-<div class="text-center">
-<script async="" src="https://js.stripe.com/v3/buy-button.js">
-</script>
-<stripe-buy-button buy-button-id="buy_btn_1S0YgyFuu6ZjhmpzZ2v3NYN4" publishable-key="pk_test_51S0TWOFuu6ZjhmpzY45m6z2LOIdWhCKouQiYj7sSBWmnNywVvjFAZTuWkaIck7EwsuqOzA23cTTLxrjE7vjNDYL100sR9ZTXno"> </stripe-buy-button>
-</div>
-<p><span class="fs-5">A celebration of magic, imagination, and tradition — inspired by fireworks, shared delights, and worlds of wonder. This premium mahjong set captures the spirit of adventure and enchantment.</span></p>
+<p><span class="fs-5 mb-4">A celebration of magic, imagination, and tradition — inspired by fireworks, shared delights, and worlds of wonder. This premium mahjong set captures the spirit of adventure and enchantment.</span></p>
 </section>
-<section id="product-details" class="level2">
-<h2 data-anchor-id="product-details">Product Details</h2>
-<div class="accordion mb-4">
+<section id="product-details" class="level2 h4 mb-3">
+<h2 class="h4 mb-3" data-anchor-id="product-details">Product Details</h2>
+<div class="accordion accordion-flush">
 <div class="accordion-item">
-<div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dimensions">Dimensions &amp; Weight</span></p>
+<div id="headingOne" class="accordion-header">
+<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Dimensions &amp; Weight</span></p>
 </div>
-<div id="dimensions" class="accordion-collapse collapse">
+<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 <div class="accordion-body">
 <ul>
 <li><strong>Tile Size</strong>: 1 7/16” × 1” × 7/16”</li>
-<li><strong>Material</strong>: Premium etched and color filled acrylic</li>
-<li><strong>Finish</strong>: High-gloss protective coating</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="accordion-item">
-<div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#included">What’s Included</span></p>
+<div id="headingTwo" class="accordion-header">
+<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">What’s Included</span></p>
 </div>
-<div id="included" class="accordion-collapse collapse">
+<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 <div class="accordion-body">
 <ul>
-<li>160 Premium mahjong tiles</li>
+<li>160 Hand-painted Acrylic Tiles</li>
 <li>2 Dice</li>
-<li>Luxury carrying case</li>
 <li>Instruction booklet</li>
 <li>Certificate of authenticity</li>
 </ul>
@@ -226,10 +196,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="accordion-item">
-<div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#care">Care &amp; Maintenance</span></p>
+<div id="headingThree" class="accordion-header">
+<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Care &amp; Maintenance</span></p>
 </div>
-<div id="care" class="accordion-collapse collapse">
+<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 <div class="accordion-body">
 <ul>
 <li>Clean with soft, damp cloth only</li>
@@ -237,19 +207,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Store in provided case when not in use</li>
 <li>Keep away from direct sunlight</li>
 <li>Handle tiles gently to preserve artwork</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#shipping">Shipping Information</span></p>
-</div>
-<div id="shipping" class="accordion-collapse collapse">
-<div class="accordion-body">
-<ul>
-<li><strong>Pre-order ships</strong>: January 2026</li>
-<li><strong>Eco-friendly packaging</strong></li>
 </ul>
 </div>
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Untitled – Magic Mahjong Moments</title>
+<title>test – Magic Mahjong Moments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -78,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./tiles/logo-magic.png" alt="" class="navbar-logo">
+    <img src="./images/logo.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -120,43 +119,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#magic-mahjong-moments" id="toc-magic-mahjong-moments" class="nav-link active" data-scroll-target="#magic-mahjong-moments">Magic Mahjong Moments</a></li>
-  <li><a href="#welcome-lala" id="toc-welcome-lala" class="nav-link" data-scroll-target="#welcome-lala">Welcome lala</a></li>
-  <li><a href="#creative-process" id="toc-creative-process" class="nav-link" data-scroll-target="#creative-process">Creative Process</a></li>
-  <li><a href="#la" id="toc-la" class="nav-link" data-scroll-target="#la">La</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Untitled</h1>
-</div>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
     <style>
-
-        /* Base animation styles */
         .element {
             opacity: 0;
             transform: translateY(50px);
@@ -180,77 +152,13 @@ ul.task-list li input[type="checkbox"] {
             }
         }
 
-        /* 1. Text Boxes */
-        .text-box {
-            background: #fefefe;
-            padding: 40px;
-            border-radius: 3px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            position: relative;
-            max-width: 600px;
-        }
-
-        .text-box::before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(45deg, transparent 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
-            border-radius: 5px;
-            z-index: -1;
-        }
-
-        .text-box h2 {
-            color: #2c1810;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-
-        .text-box p {
-            color: #5d4037;
-            line-height: 1.6;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-
-        /* Box variations */
-        .text-box.cream {
-            background: #faf8f3;
-        }
-
-        .text-box.aged {
-            background: #f4f0e8;
-        }
-
-        .text-box.center {
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .text-box.left {
-            margin-left: 0;
-            margin-right: auto;
-        }
-
-        .text-box.right {
-            margin-left: auto;
-            margin-right: 0;
-        }
-
         /* 2. Standalone Images */
         .image-element {
             transform: translateX(-100px) rotate(-5deg);
         }
 
         .image-element.animate-in {
-            animation: slideInImage 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-        }
-
-        .image-element.static:hover {
-            transform: rotate(2deg) scale(1.02);
-            transition: transform 0.3s ease;
+            animation: slideInImage 1s cubic-bezier(0.68, -0.55, 0.25, 1.55) forwards;
         }
 
         @keyframes slideInImage {
@@ -260,13 +168,13 @@ ul.task-list li input[type="checkbox"] {
             }
         }
 
-        .paper-image {
-            background: #fefefe;
-            padding: 20px;
-            border-radius: 3px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-            position: relative;
-            width: fit-content;
+     .paper-image {
+    background: url('images/pink-scallop.png') center center / cover;
+    padding: 20px;
+    position: relative;
+    aspect-ratio: 1;
+     width: 25vw; 
+     height: 25vw;
         }
 
         .image-content {
@@ -274,8 +182,8 @@ ul.task-list li input[type="checkbox"] {
             height: 200px;
             border-radius: 2px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: right;
+           // justify-content: center;
             color: #5d4037;
             font-style: italic;
         }
@@ -283,12 +191,11 @@ ul.task-list li input[type="checkbox"] {
         /* Image positioning */
         .image-element.left {
             margin-left: 0;
-            transform-origin: left center;
+          //  transform-origin: left center;
         }
 
         .image-element.right {
-            margin-left: auto;
-            transform-origin: right center;
+           // transform-origin: right center;
             transform: translateX(100px) rotate(5deg);
         }
 
@@ -408,8 +315,36 @@ ul.task-list li input[type="checkbox"] {
         }
     </style>
 
+<div class="grid position-relative">
+<div class="g-col-12 g-col-md-6 element order-1 order-md-1 position-relative" style="z-index: -1; margin-right:-50px;">
+<p><img src="product-header.png" class="img-fluid"></p>
+</div>
+<div class="g-col-12 g-col-md-6 order-2 order-md-2">
+<section id="the-enchantment-tile-set" class="level2 element paper-image">
+<h2 data-anchor-id="the-enchantment-tile-set">The Enchantment Tile Set</h2>
+<p>Our first run is open for preorder. Be among the very first to own a bit of the magic.</p>
+<p><br> <a href="./shop.html" class="btn btn-lg" style="background-color: #f2afca; color: white; border: none; border-radius: 25px; padding: 12px 30px; font-weight: 500; text-decoration: none; display: inline-block;">SHOP THE COLLECTION</a></p>
+</section>
+</div>
+</div>
+<div class="column-screen" style="background-color: pink;">
 <section id="magic-mahjong-moments" class="level2">
-<h2 class="anchored" data-anchor-id="magic-mahjong-moments">Magic Mahjong Moments</h2>
+<h2 data-anchor-id="magic-mahjong-moments">Magic Mahjong Moments</h2>
+<div class="element image-element right text-right">
+<div class="image-content">
+<p><img src="tiles/star.png" class="img-fluid" style="width:50.0%"></p>
+</div>
+</div>
+<div class="element image-element right">
+<div class="image-content">
+<p><img src="tiles/tiny-star.png" class="img-fluid" style="width:10.0%"></p>
+</div>
+</div>
+<div class="element image-element left">
+<div class="image-content">
+<p><img src="tiles/tiny-star.png" class="img-fluid" style="width:10.0%"></p>
+</div>
+</div>
 </section>
 <section id="welcome-lala" class="level1 element background-text center">
 <h1>Welcome lala</h1>
@@ -421,18 +356,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <section id="creative-process" class="level2 element background-text right">
-<h2 class="anchored" data-anchor-id="creative-process">Creative Process</h2>
+<h2 data-anchor-id="creative-process">Creative Process</h2>
 <p>More background text that appears without any container. This one is aligned to the right side.</p>
 </section>
-<div class="element image-element square center">
-<div class="paper-image">
-<div class="image-content">
-<p>Square image</p>
-</div>
-</div>
-</div>
 <section id="la" class="level2 element background-text left">
-<h2 class="anchored" data-anchor-id="la">La</h2>
+<h2 data-anchor-id="la">La</h2>
 <p>alsdf</p>
 </section>
     <script>
@@ -463,17 +391,11 @@ ul.task-list li input[type="checkbox"] {
     </script>
 
 
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -537,7 +459,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/magicmahjongmoments\.github\.io\/magicmahjongmoments\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
