@@ -253,15 +253,16 @@ ul.task-list li input[type="checkbox"] {
 <p><br></p>
 <div class="nav-buttons text-center">
 <button class="nav-btn game-btn" onclick="scrollCarousel(-1)">
-<p>← Previous</p>
+← Previous
 </button>
 <button class="nav-btn game-btn" onclick="scrollCarousel(1)">
-<p>Next →</p>
+Next →
 </button>
 </div>
 <div class="box">
 <p><strong>Pro tip:</strong> Make sure to read the notes! Sometimes the pattern will use one number, but the notes specify that multiple numbers qualify.</p>
 </div>
+<p><a href="../../posts/7-game-play" class="game-btn">Next Lesson</a></p>
 <script>
 let currentSlide = 0;
 const carousel = document.getElementById('carousel');
@@ -723,187 +724,6 @@ carousel.addEventListener('scroll', () => {
     </div>
   </div>
 </footer>
-<script src="../../assets/js/MahjongUtils.js"></script>
-<script>
-        // Game State Management
-        class HandPatternGame {
-            constructor() {
-                this.tileMap = MahjongUtils.buildTileMap();
-                this.currentHand = [];
-                this.selectedOption = null;
-                this.correctAnswer = null;
-                this.handPatterns = [
-                    {
-                        name: "2468",
-                        description: '<span style="color: green; font-weight: bold;">22 44</span> <span style="color: red; font-weight: bold;">44 666</span> <span style="color: grey; font-weight: bold;">8888</span> (Any 3 Suits)',
-                        tiles: ['B2', 'B2', 'B4', 'B4', 'C4', 'C4', 'C6', 'C6', 'C6', 'D8', 'D8', 'D8', 'D8']
-                    },
-                    {
-                        name: "2025",
-                        description: '<span style="color: grey; font-weight: bold;">FFFF</span> <span style="color: green; font-weight: bold;">2025</span> <span style="color: red; font-weight: bold;">222 222</span> (Any 3 Suits, Like Pungs Must be 2 or 5)',
-                        tiles: ['FL', 'FL', 'FL', 'FL', 'C2', 'DD', 'C2', 'C5', 'D5', 'D5', 'D5', 'D5', 'D5', 'D5']
-                    },
-                    {
-                        name: "All Winds",
-                        description: '<span style="color: green; font-weight: bold;">[EEEE]</span> <span style="color: red; font-weight: bold;">[SSSS]</span> <span style="color: blue; font-weight: bold;">[WWWW]</span> <span style="color: purple; font-weight: bold;">[NN]</span> (All Winds)',
-                        tiles: ['E', 'E', 'E', 'E', 'S', 'S', 'S', 'S', 'W', 'W', 'W', 'W', 'N', 'N']
-                    },
-                    {
-                        name: "Straight Run",
-                        description: '<span style="color: green; font-weight: bold;">[123 456]</span> <span style="color: red; font-weight: bold;">[789 123]</span> <span style="color: blue; font-weight: bold;">[45]</span> (Sequential)',
-                        tiles: ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'C1', 'C2', 'C3', 'C4', 'C5']
-                    },
-                    {
-                        name: "Dragons and Winds",
-                        description: '<span style="color: green; font-weight: bold;">[DDD BBB]</span> <span style="color: red; font-weight: bold;">[CCC EEE]</span> <span style="color: blue; font-weight: bold;">[SS]</span> (Honours)',
-                        tiles: ['DD', 'DD', 'DD', 'BD', 'BD', 'BD', 'CD', 'CD', 'CD', 'E', 'E', 'E', 'S', 'S']
-                    }
-                ];
-                this.init();
-            }
-
-            init() {
-                this.setupEventListeners();
-                this.generateNewHand();
-            }
-
-            generateNewHand() {
-                // Select random pattern
-                const randomIndex = Math.floor(Math.random() * this.handPatterns.length);
-                const selectedPattern = this.handPatterns[randomIndex];
-                this.correctAnswer = randomIndex;
-                
-                // Use the pattern's tiles as the current hand
-                this.currentHand = [...selectedPattern.tiles];
-                
-
-                this.displayCurrentHand();
-                this.displayPatternOptions();
-                this.clearFeedback();
-            }
-
-            shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-            }
-
-            displayCurrentHand() {
-                const container = document.getElementById('current-hand');
-                container.innerHTML = '';
-                
-                this.currentHand.forEach(tileCode => {
-                    const tile = this.createTileElement(tileCode);
-                    container.appendChild(tile);
-                });
-            }
-
-            displayPatternOptions() {
-                const container = document.getElementById('pattern-options');
-                container.innerHTML = '';
-                
-                // Create shuffled options
-                const shuffledOptions = [...this.handPatterns];
-                this.shuffleArray(shuffledOptions);
-                
-                shuffledOptions.forEach((pattern, index) => {
-                    const option = document.createElement('div');
-                    option.className = 'pattern-option';
-                    option.innerHTML = pattern.description;
-                    option.dataset.patternIndex = this.handPatterns.indexOf(pattern);
-                    
-                    option.addEventListener('click', () => this.selectOption(option));
-                    container.appendChild(option);
-                });
-            }
-
-            createTileElement(tileCode) {
-                const tile = document.createElement('div');
-                tile.className = 'mahjong-tile-play';
-                tile.dataset.tileCode = tileCode;
-                
-                const svgPath = this.getTileSvgPath(tileCode);
-                tile.innerHTML = `<img src="${svgPath}" alt="${tileCode}" class="tile-image-play">`;
-                
-                return tile;
-            }
-
-            getTileSvgPath(tileCode) {
-                const fileName = this.tileMap[tileCode] || 'blank.svg';
-                return `../../assets/images/tiles/${fileName}`;
-            }
-
-            selectOption(optionElement) {
-                // Clear previous selection
-                document.querySelectorAll('.pattern-option').forEach(opt => {
-                    opt.classList.remove('selected');
-                });
-                
-                // Select new option
-                optionElement.classList.add('selected');
-                this.selectedOption = parseInt(optionElement.dataset.patternIndex);
-            }
-
-            checkAnswer() {
-                if (this.selectedOption === null) {
-                    this.showFeedback('Please select an answer first!', false);
-                    return;
-                }
-                
-                const options = document.querySelectorAll('.pattern-option');
-                
-                if (this.selectedOption === this.correctAnswer) {
-                    // Correct answer
-                    options.forEach(opt => {
-                        if (parseInt(opt.dataset.patternIndex) === this.correctAnswer) {
-                            opt.classList.add('correct');
-                        }
-                    });
-                    this.showFeedback('Correct! Well done!', true);
-                } else {
-                    // Incorrect answer
-                    options.forEach(opt => {
-                        const patternIndex = parseInt(opt.dataset.patternIndex);
-                        if (patternIndex === this.selectedOption) {
-                            opt.classList.add('incorrect');
-                        } else if (patternIndex === this.correctAnswer) {
-                            opt.classList.add('correct');
-                        }
-                    });
-                    this.showFeedback('Incorrect. The correct answer is highlighted in green.', false);
-                }
-            }
-
-            showFeedback(message, isCorrect) {
-                const feedback = document.getElementById('feedback');
-                feedback.textContent = message;
-                feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
-                feedback.style.display = 'block';
-            }
-
-            clearFeedback() {
-                const feedback = document.getElementById('feedback');
-                feedback.style.display = 'none';
-                this.selectedOption = null;
-                
-                // Clear option styling
-                document.querySelectorAll('.pattern-option').forEach(opt => {
-                    opt.classList.remove('selected', 'correct', 'incorrect');
-                });
-            }
-
-            setupEventListeners() {
-                document.getElementById('check-btn').addEventListener('click', () => this.checkAnswer());
-                document.getElementById('new-hand-btn').addEventListener('click', () => this.generateNewHand());
-            }
-        }
-
-        // Initialize the game
-        document.addEventListener('DOMContentLoaded', () => {
-            new HandPatternGame();
-        });
-    </script>
 
 
 
