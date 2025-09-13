@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-62d035685c46377066d0e4f34a979f58.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ad4a4acd1090aa6786653865528297f3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,16 +100,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Our Story</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../how-to-mahjong.html"> 
-<span class="menu-text">Learn to Play</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../the-mahjong-tradition.html"> 
-<span class="menu-text">The Mahjong Tradition</span></a>
-  </li>  
-</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -130,96 +120,81 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-.grid-container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  overflow: hidden;
-}
-
-.scrollable-left {
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.scrollable-right {
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.product-image {
-  transition: transform 0.3s ease;
-}
-
-.product-image:hover {
-  transform: scale(1.02);
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50vh 1fr;
+@media (min-width: 768px) {
+  .full-height-grid {
+    height: 100vh;
   }
-  
-  .scrollable-left, .scrollable-right {
+  .scrollable-column {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .scrollable-column {
     height: auto;
-    min-height: 50vh;
+    overflow-y: visible;
   }
 }
 </style>
 <div class="column-screen">
-<div class="grid-container">
-<div class="g-col-6 p-4 scrollable-left">
-<p><img src="../tiles.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
-<p><img src="../product.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
-<p><img src="../product-2.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
-<p><img src="../product-header.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
+<div class="grid full-height-grid">
+<div class="g-col-12 g-col-md-6 p-4 scrollable-column order-2 order-md-1">
+<p><img src="../tiles.png" class="product-image img-fluid rounded-3 shadow mb-4"> <img src="../product.png" class="product-image img-fluid rounded-3 shadow mb-4"> <img src="../product-2.png" class="product-image img-fluid rounded-3 shadow mb-4"> <img src="../product-header.png" class="product-image img-fluid rounded-3 shadow mb-4"></p>
 </div>
-<div class="g-col-6 border-start p-4 scrollable-right">
-<section id="the-enchantment-collection" class="level2 display-5 text-left mb-3">
-<h2 class="display-5 text-left mb-3" data-anchor-id="the-enchantment-collection">The Enchantment Collection</h2>
-<p><span class="fs-5 text-muted mb-4">Limited Edition Mahjong Collection</span></p>
-<div class="display-5 fw-bold">
-<p>$350</p>
+<div class="g-col-12 g-col-md-6 border-start p-4 scrollable-column order-1 order-md-2">
+<section id="the-enchantment-collection" class="level2 display-5 text-start mb-3">
+<h2 class="display-5 text-start mb-3" data-anchor-id="the-enchantment-collection">The Enchantment Collection</h2>
+<p><span class="fs-5 text-muted mb-4">Limited Edition Preorder</span></p>
+<div class="d-flex align-items-baseline gap-3 mb-4 fs-4">
+<p><span class="text-decoration-line-through text-muted"><del>$450</del></span> <span class="fw-bold">$350</span></p>
 </div>
-<div class="fs-5 text-decoration-line-through opacity-75">
-<p><del>$450</del></p>
+<div class="mb-4">
+<script async="" src="https://js.stripe.com/v3/buy-button.js"></script>
+<stripe-buy-button buy-button-id="buy_btn_1S0YgyFuu6ZjhmpzZ2v3NYN4" publishable-key="pk_test_51S0TWOFuu6ZjhmpzY45m6z2LOIdWhCKouQiYj7sSBWmnNywVvjFAZTuWkaIck7EwsuqOzA23cTTLxrjE7vjNDYL100sR9ZTXno">
+</stripe-buy-button>
 </div>
-<div class="text-center">
-<script async="" src="https://js.stripe.com/v3/buy-button.js">
-</script>
-<stripe-buy-button buy-button-id="buy_btn_1S0YgyFuu6ZjhmpzZ2v3NYN4" publishable-key="pk_test_51S0TWOFuu6ZjhmpzY45m6z2LOIdWhCKouQiYj7sSBWmnNywVvjFAZTuWkaIck7EwsuqOzA23cTTLxrjE7vjNDYL100sR9ZTXno"> </stripe-buy-button>
+<div class="fs-6">
+<p>Step into a world where imagination comes alive and timeless traditions sparkle with new life. The Enchanted Collection is inspired by the joy of fireworks, the delight of shared treats, and the wonder of fantastical worlds.</p>
+<p>Each tile tells a story: whimsical popcorn Dots, dazzling firework Bams, courageous hero’s Craks, elegant Princess florals, sleek monorail Winds, and magical park-inspired Jokers. Together, they capture the spirit of adventure and the enchantment of Disney-inspired storytelling, reimagined for Mahjong players.</p>
+<p>Crafted in glossy acrylic with etched detailing, The Enchanted Collection blends luxury with playfulness, making every game a celebration of magic and tradition.</p>
+<ul>
+<li>Inspired Design – Fireworks, florals, monorails, and more bring Disney-inspired wonder to Mahjong.<br>
+</li>
+<li>Luxury Craftsmanship – Glossy acrylic tiles with etched detailing for timeless elegance.<br>
+</li>
+<li>Complete American Mahjong Set – Designed to be both playable and collectible.<br>
+</li>
+<li>Exclusive Magic Mahjong Moments Palette – Disney Blue, Sandstone Gold, Resort Pink, Lagoon Teal, and Sunset Coral.<br>
+</li>
+<li>Where Tradition Meets Magic – Perfect for play, gifting, or display.</li>
+</ul>
 </div>
-<p><span class="fs-5">A celebration of magic, imagination, and tradition — inspired by fireworks, shared delights, and worlds of wonder. This premium mahjong set captures the spirit of adventure and enchantment.</span></p>
 </section>
-<section id="product-details" class="level2">
-<h2 data-anchor-id="product-details">Product Details</h2>
-<div class="accordion mb-4">
+<section id="product-details" class="level2 h4 mb-3">
+<h2 class="h4 mb-3" data-anchor-id="product-details">Product Details</h2>
+<div id="accordion1" class="accordion accordion-flush display-5">
 <div class="accordion-item">
 <div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dimensions">Dimensions &amp; Weight</span></p>
+<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1">Dimensions &amp; Weight</span></p>
 </div>
-<div id="dimensions" class="accordion-collapse collapse">
-<div class="accordion-body">
+<div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+<div class="accordion-body fs-6">
 <ul>
 <li><strong>Tile Size</strong>: 1 7/16” × 1” × 7/16”</li>
-<li><strong>Material</strong>: Premium etched and color filled acrylic</li>
-<li><strong>Finish</strong>: High-gloss protective coating</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="accordion-item">
 <div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#included">What’s Included</span></p>
+<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2">What’s Included</span></p>
 </div>
-<div id="included" class="accordion-collapse collapse">
-<div class="accordion-body">
+<div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+<div class="accordion-body fs-6">
 <ul>
-<li>160 Premium mahjong tiles</li>
+<li>160 Hand-painted Acrylic Tiles</li>
 <li>2 Dice</li>
-<li>Luxury carrying case</li>
 <li>Instruction booklet</li>
 <li>Certificate of authenticity</li>
 </ul>
@@ -228,10 +203,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="accordion-item">
 <div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#care">Care &amp; Maintenance</span></p>
+<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse3">Care &amp; Maintenance</span></p>
 </div>
-<div id="care" class="accordion-collapse collapse">
-<div class="accordion-body">
+<div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+<div class="accordion-body fs-6">
 <ul>
 <li>Clean with soft, damp cloth only</li>
 <li>Avoid harsh chemicals or abrasives</li>
@@ -242,26 +217,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<div class="accordion-item">
-<div class="accordion-header">
-<p><span class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#shipping">Shipping Information</span></p>
-</div>
-<div id="shipping" class="accordion-collapse collapse">
-<div class="accordion-body">
-<ul>
-<li><strong>Pre-order ships</strong>: January 2026</li>
-<li><strong>Eco-friendly packaging</strong></li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 </section>
 </div>
-</div>
-</div>
 
 
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -660,7 +622,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Magic Mahjong Moments.</p>
+<p>© 2025 Magic Mahjong Moments. <br><br> Magic Mahjong Moments does not claim to represent the Walt Disney Company in any way and is not employed by or affiliated with The Walt Disney Company.</p>
 </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
